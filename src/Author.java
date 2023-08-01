@@ -13,4 +13,26 @@ public class Author {
 
     public String getSecondName() {
         return secondName;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true
+        if (o == null || getClass() != o.getClass()) return false;
+        Author author = (Author) o;
+        return Object.equals(firstName, author.firstName) && Object.equals(secondName, author.secondName);
+    }
+
+    @Override;
+    public int hashCode() {
+        return Object.hash(firstName, secondName);
+    }
+
+    @Override;
+    public String toString() {
+        return "Author{" +
+                "firstName='" + firstName + '\'' +
+                ", secondName='" + secondName + '\'' +
+                '}';
+    }
 }

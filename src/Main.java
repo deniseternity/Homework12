@@ -13,10 +13,18 @@ public class Main {
         javaPhilosophy.setPublishingYear(2020);
 
         printBook(javaPhilosophy);
+
+        System.out.println(javaPhilosophy.equals(cleanCode));
+
+        Book javaPhilosophyNew = new Book("Философия Java", ekkel, 2020);
+
+        System.out.println(javaPhilosophy.equals(javaPhilosophyNew));
+
+        System.out.println(ekkel.getClass());
+        System.out.println(javaPhilosophy.getClass());
     }
 
     public static void printBook(Book book) {
-        System.out.println(book.getTitle() + " " + book.getPublishingYear()
-                + " " + book.getAuthor().getFirstName() + " " + book.getAuthor().getSecondName());
+        System.out.println(book.toString());
     }
 }
